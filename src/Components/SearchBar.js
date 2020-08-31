@@ -15,6 +15,7 @@ export default function SearchBar() {
           <TextField {...params} label="freeSolo" margin="normal" variant="outlined" />
         )}
       />
+      
     </div>
   );
 }

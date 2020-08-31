@@ -2,6 +2,7 @@ import React,{useEffect,useState,Fragment} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import SearchBar from './SearchBar';
+import SearchBtn from './SearchBtn';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -11,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       height: theme.spacing(16),
     },
+  },
+  flex : {
+      display : 'flex',
+      justifyContent : 'center',
+      alignItems : 'center',
+      flexFlow : 'column'
   },
 }));
 
@@ -26,7 +33,6 @@ export default function CountryPaper() {
   const fetchCountriesData = async() =>{
     const apiResponse = await fetch('https://api.thevirustracker.com/free-api?countryTotals=ALL');
     const dataResponse = await apiResponse.json()
-    // console.log(dataResponse.countryitems[0])
     setCountires(dataResponse.countryitems[0])
   }
   return (
@@ -34,8 +40,9 @@ export default function CountryPaper() {
         {
             countries ? 
             <Fragment>
-                <Paper elevation={3}>
+                <Paper elevation={3} className={classes.flex}>
                     <SearchBar/>
+                    <SearchBtn/>
                   </Paper>
                 <Paper elevation={3} />
             </Fragment>
