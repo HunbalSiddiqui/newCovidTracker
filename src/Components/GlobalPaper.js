@@ -45,7 +45,7 @@ export default function GlobalPaper() {
                 {globalData.total_cases}
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
-                Total Cases
+                Total Cases (Globally)
             </Typography>
         </Paper>
         <Paper elevation={3}>
@@ -61,7 +61,7 @@ export default function GlobalPaper() {
                 {globalData.total_recovered}
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
-                Recovered Cases
+                Recovered Cases (Globally)
             </Typography>
         </Paper>
         <Paper elevation={3}>
@@ -69,7 +69,7 @@ export default function GlobalPaper() {
                 {globalData.total_deaths}
             </Typography>
             <Typography variant="subtitle1" gutterBottom>
-                Fatalities
+                Fatalities (Globally)
             </Typography>
         </Paper>
         <Paper elevation={3}>
@@ -77,14 +77,11 @@ export default function GlobalPaper() {
                 {globalData.total_unresolved+globalData.total_active_cases}
             </Typography>
             <Typography  variant="subtitle1" gutterBottom>
-                Active Cases
+                Active Cases (Globally)
             </Typography>
         </Paper>
         </Fragment>
         :
-        // <Typography className="info"  variant="subtitle1" gutterBottom>
-        //         Fetching Cases
-        // </Typography>
         <ProgressBar/>
         }
         

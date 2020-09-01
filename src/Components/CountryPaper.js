@@ -34,30 +34,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CountryPaper() {
   const classes = useStyles();
-
-  useEffect(()=>{
-    fetchCountriesData()
-},[])
-
-    var [countries,setCountires] = useState(null)
-  const fetchCountriesData = async() =>{
-    const apiResponse = await fetch('https://api.thevirustracker.com/free-api?countryTotals=ALL');
-    const dataResponse = await apiResponse.json()
-    setCountires(dataResponse.countryitems[0])
-  }
   return (
     <div className={classes.root}>
-        {
-            countries ? 
             <Fragment>
                 <Paper elevation={3} className={classes.flex} >
                     <CountriesDropdown/>
                 </Paper>
             </Fragment>
-      :
-      null
-    }
-
     </div>
   );
 }

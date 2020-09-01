@@ -3,14 +3,14 @@ import React,{Fragment,useState,useEffect} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import SearchBtn from './SearchBtn';
-// import { countryList } from './countryList';
+import ProgressBar from './ProgressBar';
 
 
 export default function CountriesDropdown() {
  
 
   const [selectedCountry,setCountry] = useState(null)
-  const [allCountryNames,setAllCountryNames] = useState([])
+  const [allCountryNames,setAllCountryNames] = useState(null)
   useEffect(()=>{
     getCountryNames()
   },[])
@@ -29,7 +29,7 @@ export default function CountriesDropdown() {
     setAllCountryNames(countryNames)
 }
   return (
-    allCountryNames ?  <Fragment>
+    allCountryNames?  <Fragment>
           <Autocomplete style={{ width: 300 }}
         freeSolo
         id="free-solo-2-demo"
@@ -55,7 +55,7 @@ export default function CountriesDropdown() {
     }
     </Fragment>
     :
-    null
+    <ProgressBar/>
   );
 }
 
