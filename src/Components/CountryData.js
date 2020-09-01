@@ -39,7 +39,7 @@ export default function CountryData(props) {
     const classes = useStyles();
     var {total_active_cases,total_deaths,total_cases,
         total_new_cases_today,total_new_deaths_today,
-    total_recovered,total_serious_cases} = props.countryData
+    total_recovered,total_serious_cases,total_unresolved} = props.countryData
     return (
         <Paper elevation={3} className={classes.DetailsArea}>
         <Paper className={classes.smallPaper}>
@@ -100,10 +100,10 @@ export default function CountryData(props) {
         </Paper>
         <Paper className={classes.smallPaper}>
           <Typography className="info" variant="h5" gutterBottom>
-              {total_recovered}
+              {total_unresolved}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
-              Total Recovered
+              Total Unresolved Cases
           </Typography>
         </Paper>
       </Paper>

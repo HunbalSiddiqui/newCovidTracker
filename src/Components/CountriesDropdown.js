@@ -26,7 +26,6 @@ export default function CountriesDropdown() {
             {break;}//because api has "ok" at index 182
 		}
     }
-    console.log(countryNames)
     setAllCountryNames(countryNames)
 }
   return (
