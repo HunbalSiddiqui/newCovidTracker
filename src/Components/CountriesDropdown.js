@@ -40,7 +40,7 @@ export default function CountriesDropdown() {
         renderInput={(params) => (
           <TextField
             {...params}
-            label="Search input"
+            label="Search by country name"
             margin="normal"
             variant="outlined"
             InputProps={{ ...params.InputProps, type: 'search' }}
