@@ -30,10 +30,6 @@ export default function Footer() {
         <GitHub></GitHub>
           </a>
           </h1>
-
-          <h1 className={classes.subtitle}>
-          COPYRIGHT © 2020 M.HUNBAL SIDDIQUI - ALL RIGHTS RESERVED.
-          </h1>
         </Toolbar>
       </AppBar>
   );
