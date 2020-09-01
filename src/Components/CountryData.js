@@ -51,7 +51,7 @@ export default function CountryData(props) {
           </Typography>
         </Paper>
         <Paper className={classes.smallPaper}>
-          <Typography className="info" variant="h5" gutterBottom>
+          <Typography className="danger" variant="h5" gutterBottom>
               {total_deaths}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
@@ -67,7 +67,7 @@ export default function CountryData(props) {
           </Typography>
         </Paper>
         <Paper className={classes.smallPaper}>
-          <Typography className="info" variant="h5" gutterBottom>
+          <Typography className="warning" variant="h5" gutterBottom>
               {total_new_cases_today}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
@@ -75,7 +75,7 @@ export default function CountryData(props) {
           </Typography>
         </Paper>
         <Paper className={classes.smallPaper}>
-          <Typography className="info" variant="h5" gutterBottom>
+          <Typography className="danger" variant="h5" gutterBottom>
               {total_new_deaths_today}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
@@ -83,7 +83,7 @@ export default function CountryData(props) {
           </Typography>
         </Paper>
         <Paper className={classes.smallPaper}>
-          <Typography className="info" variant="h5" gutterBottom>
+          <Typography className="danger" variant="h5" gutterBottom>
               {total_serious_cases}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
@@ -91,7 +91,7 @@ export default function CountryData(props) {
           </Typography>
         </Paper>
         <Paper className={classes.smallPaper}>
-          <Typography className="info" variant="h5" gutterBottom>
+          <Typography className="success" variant="h5" gutterBottom>
               {total_recovered}
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
@@ -99,10 +99,10 @@ export default function CountryData(props) {
           </Typography>
         </Paper>
         <Paper className={classes.smallPaper}>
-          <Typography className="info" variant="h5" gutterBottom>
+          <Typography className="warning" variant="h5" gutterBottom>
               {total_unresolved}
           </Typography>
-          <Typography variant="subtitle1" gutterBottom>
+          <Typography variant="subtitle1"  gutterBottom>
               Total Unresolved Cases
           </Typography>
         </Paper>
